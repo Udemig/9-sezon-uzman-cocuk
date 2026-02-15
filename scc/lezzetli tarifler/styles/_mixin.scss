@@ -1,0 +1,8 @@
+@mixin card-hover {
+  transition: all $transition-speed;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: $hover-shadow;
+  }
+}

@@ -1,0 +1,38 @@
+header {
+  background-color: white;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+
+  //   Navigation
+  .nav {
+    max-width: $container-width;
+    margin: 0 auto;
+    padding: 1rem;
+    @extend .flex;
+    justify-content: space-between;
+
+    // Logo
+    .logo {
+      font-family: $secondary-font;
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: $primary-color;
+    }
+
+    &-links {
+      @extend .flex;
+      gap: 2rem;
+
+      li {
+        a {
+          transition: all $transition-speed;
+          &:hover {
+            color: $primary-color;
+          }
+        }
+      }
+    }
+  }
+}
