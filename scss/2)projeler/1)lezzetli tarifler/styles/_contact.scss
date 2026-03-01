@@ -1,0 +1,75 @@
+.contact {
+  padding: 5rem 1rem;
+  background-color: #3a3a3a;
+  color: white;
+
+  &-container {
+    max-width: $container-width;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+
+    @include tablet {
+      grid-template-columns: 1fr;
+    }
+
+    // İnfo
+    .info {
+      h2 {
+        font-family: $secondary-font;
+        margin-bottom: 1rem;
+      }
+
+      &-item {
+        display: flex;
+        align-items: center;
+        margin: 1rem 0;
+
+        i {
+          font-size: 1.5rem;
+          margin-right: 1rem;
+          color: $primary-color;
+        }
+      }
+    }
+
+    // Form
+    .form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+
+      input,
+      textarea {
+        padding: 1rem;
+        border-radius: $border-radius;
+        background-color: rgba(255, 255, 255, 0.1);
+        color: white;
+
+        &::placeholder {
+          color: rgba(255, 255, 255, 0.7);
+        }
+      }
+
+      textarea {
+        resize: none;
+        height: 150px;
+      }
+
+      button {
+        @include button;
+        align-self: flex-start;
+        font-size: 1rem;
+        font-weight: 500;
+        min-width: 150px;
+        transition: all $transition-speed;
+
+        &:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+      }
+    }
+  }
+}

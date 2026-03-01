@@ -1,0 +1,54 @@
+.menu {
+  background-color: $light-gray;
+  padding: 5rem 1rem;
+
+  h2 {
+    text-align: center;
+    font-family: $secondary-font;
+    margin-bottom: 3rem;
+  }
+
+  // Grid Container
+  &-grid {
+    max-width: $container-width;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+
+    // Card
+    &-card {
+      background-color: white;
+      padding: 2rem;
+      border-radius: $border-radius;
+      box-shadow: $box-shadow;
+      cursor: pointer;
+      @include card-hover;
+
+      // Card Top
+      &-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 1rem;
+
+        h3 {
+          color: $text-color;
+          font-family: $secondary-font;
+          text-transform: capitalize;
+        }
+
+        span {
+          color: $primary-color;
+          font-size: 1.2rem;
+          font-weight: bold;
+        }
+      }
+
+      p {
+        color: $dark-gray;
+        letter-spacing: 1px;
+      }
+    }
+  }
+}
