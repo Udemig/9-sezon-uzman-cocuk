@@ -16,6 +16,7 @@
 @import "./mixin";
 @import "./aside";
 @import "./main";
+@import "./player";
 
 // Global Styles
 body {
@@ -24,10 +25,11 @@ body {
   color: white;
   height: 100vh;
   padding: 20px;
-  // overflow: hidden;
+  overflow: hidden;
 }
 
 .layout {
   display: flex;
   gap: 20px;
+  height: calc(100vh - 120px);
 }
